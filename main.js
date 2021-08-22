@@ -3,7 +3,7 @@ var numbers = [10,10,10,10,10,10,10,10];
 var downPower = 1;
 var autoDown = 0;
 function numberGoesDown() {
-  number -= downPower;
+  numbers[0] -= downPower;
   updateNumbers();
 }
 function numberGoesDowner() {
