@@ -8,12 +8,12 @@ function numberGoesDown() {
 }
 function numberGoesDowner() {
   downPower++;
-  if (downPower > 10) downPower = 10;
+  if (downPower > 25) downPower = 25;
   updateNumbers();
 }
 function numberGoesDownAuto() {
   autoDown++;
-  if (autoDown > 10) autoDown = 10;
+  if (autoDown > 25) autoDown = 25;
   updateNumbers();
 }
 function updateNumbers() {
@@ -40,7 +40,7 @@ function nextFrame(timeStamp) {
     downPower -= dt/1000;
   } else downPower = 1;
   if (autoDown > 0) {
-    autoDown -= dt/100;
+    autoDown -= dt/10000;
   } else autoDown = 0;
   updateNumbers();
   if (youWin) document.write("You're winner!")
