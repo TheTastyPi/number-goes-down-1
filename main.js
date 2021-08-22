@@ -22,8 +22,8 @@ function updateNumbers() {
       if (i == 7) {
         youWin = true;
       } else {
-        numbers[i] = 10-numbers[i]%10;
         numbers[i+1] += Math.floor(numbers[i]/10);
+        numbers[i] = 10+numbers[i]%10;
       }
     }
     document.getElementById("number"+i).innerText = numbers[i].toFixed();
