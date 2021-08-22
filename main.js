@@ -9,10 +9,12 @@ function numberGoesDown() {
 function numberGoesDowner() {
   downPower++;
   if (downPower > 10) downPower = 10;
+  updateNumbers();
 }
 function numberGoesDownAuto() {
   autoDown++;
   if (autoDown > 10) autoDown = 10;
+  updateNumbers();
 }
 function updateNumbers() {
   for (let i in numbers) {
@@ -24,8 +26,10 @@ function updateNumbers() {
         numbers[i+1] += Math.floor(numbers[i]/10);
       }
     }
-    document.getElementById("number"+i) = numbers[i].toFixed(2);
+    document.getElementById("number"+i).innerText = numbers[i].toFixed();
   }
+  document.getElementById("downPower").innerText = downPower.toFixed(2);
+  document.getElementById("autoDown").innerText = autoDown.toFixed(2);
 }
 var lastFrame = 0;
 function nextFrame(timeStamp) {
