@@ -17,7 +17,7 @@ function numberGoesDownAuto() {
   updateNumbers();
 }
 function updateNumbers() {
-  for (let i in numbers) {
+  for (let i = 0; i < 8; i++) {
     if (numbers[i] < 0) {
       if (i == 7) {
         youWin = true;
