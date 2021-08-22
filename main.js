@@ -43,7 +43,8 @@ function nextFrame(timeStamp) {
     autoDown -= dt/10000;
   } else autoDown = 0;
   updateNumbers();
-  if (youWin) document.write("You're winner!")
-  window.requestAnimationFrame(nextFrame);
+  if (youWin) {
+    document.write("You're winner!");
+  } else window.requestAnimationFrame(nextFrame);
 }
 window.requestAnimationFrame(nextFrame);
